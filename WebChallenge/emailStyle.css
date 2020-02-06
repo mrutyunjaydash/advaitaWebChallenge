@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+* {
+    box-sizing: border-box;
+
+
+    font-family: 'Acme', sans-serif;
+
+
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: rgb(2, 25, 46);
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: rgb(28, 201, 201);
+    border-radius: 10%;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: rgb(160, 153, 155);
+     padding: 20px;
+     margin-top: 20px;
+     border-radius: 10%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    border-radius: 10%;
+    background-color: turquoise;
+  }
+  .card p{
+      font-size: 20px;
+  }
+  .card div{
+      font-size: 20px;
+      cursor: pointer;
+  }
+  .card-email{
+    background-color: rgba(255, 255, 255, 0.568);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10%;
+    overflow:scroll;
+    height:400px;
+  }
+  .card-email p{
+    font-size: 20px;
+  }
+  .card-email div{
+    font-size: 20px;
+    cursor: pointer;
+  } 
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }

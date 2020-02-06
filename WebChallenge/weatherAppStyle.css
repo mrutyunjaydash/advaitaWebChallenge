@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+*{
+    font-family: 'Bangers', cursive;
+}
+html{
+    background-image: url(https://wallpapersite.com/images/pages/pic_w/10471.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.mainNav li a{
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Bangers', cursive;
+    color: yellow;
+}
+.mainNav li a:hover{
+  color: #ff00ea;
+}
+.mainNav{
+    list-style-type: none;
+    text-align: right;
+    padding: 5px;
+}
+.mainNav li{
+    display: inline;
+    margin: 20px;
+}
+.navBtn{
+    list-style-type:none;
+    color: yellow;
+    font-family: 'Bangers', cursive;
+    position: absolute;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Bangers', cursive;
+    color: yellow;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f700ff;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+
+/* ______FOOTER________*/
+.middle {
+    padding: 0;
+    margin:0;
+    position: absolute;
+    bottom: -50px;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    margin: 25px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: yellow;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn i {
+    margin-right: 20px;
+    line-height: 90px;
+    font-size: 40px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.2);
+    color: #ff00ea;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: yellow;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+/*_____________________*/
+
+.weatherLog{
+    padding: 20px;
+    margin-top:55px;
+    margin-left: 375px;
+    width: 300px;
+    background-color: rgba(241, 22, 241, 0.3);
+    text-align: center;
+    float: left;
+    clear:none;
+    border-radius: 10%;
+}
+.weatherHeading{
+    font-size: 40px;
+}
+.address{
+    font-size: 25px;
+}
+.lowHight{
+    font-size: 25px;
+}
+.deg{
+    font-size: 25px;
+}
+.place{
+    font-size: 25px;
+}
+.weather{
+    width: 300px;
+    float: right;
+    margin-right: 400px;
+    margin-top: 75px;
+}
+@media screen and (max-height: 600px) {
+    .overlay a {font-size: 30px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    .mainNav{
+        display: none;
+    }
+    .middle{
+        display: none;
+    }
+    .weatherLog{
+        width: 100%;
+        margin-top: 50px;
+        float: none;
+    }
+    .weatherHeading{
+        font-size: 20px;
+    }
+    .address{
+        font-size: 15px;
+    }
+    .lowHight{
+        font-size: 15px;
+    }
+    .deg{
+        font-size: 15px;
+    }
+    .place{
+        font-size: 15px;
+    }
+    .weather{
+        display: none;
+    }
+
+  }

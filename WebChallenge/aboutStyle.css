@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+body {
+    
+
+  font-family: 'Anton', sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    margin-left:240px;
+  }
+  .column1 {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    margin-left:40px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    background-image: url(https://wallpapersite.com/images/wallpapers/stars-2880x1800-galaxy-4k-6362.jpg);
+    border-radius: 10%;
+  }
+  
+  .about-section {
+    padding: 10px;
+    text-align: center;
+    background-image: url(https://ak9.picdn.net/shutterstock/videos/34245619/thumb/10.jpg);
+    color: rgb(92, 0, 116);
+    font-size: 40px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  .button:hover {
+    background-color: #555;
+
+  }
+  .row{
+      text-align: center;
+      background-color: cornflowerblue;
+      margin: 0;
+  }
+  .card p,h1{
+    color: white;
+
+  }
+  .card p{
+    font-size: 25px;
+  }
+  .team{
+    color:  rgb(255, 251, 0);
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: cornflowerblue;
+  }
+  .footer{
+    background-color: cornflowerblue;
+  }
+  .footer img{
+    margin-left: 720px;
+    
+  }
+  .footer h1{
+    margin-left: 738px;
+    color: black
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      float:none;
+      margin-left: 3px;
+    }
+    .column1{
+      float: none;
+      width: 100%;
+      display: block;
+      margin-left:3px;
+    }
+    .footer img{
+      margin-left: 205px;
+      
+    }
+    .footer h1{
+      margin-left:220px;
+      color: black;
+    }
+  }

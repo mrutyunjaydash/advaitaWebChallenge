@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.map{
+    float:right;
+    margin-right:600px;
+    margin-top:100px;
+    font-family: 'Bangers', cursive;
+    width: 100px;
+    padding: 0;
+}
+.myContact{
+    padding: 20px;
+    margin-top:55px;
+    margin-left: 350px;
+    width: 300px;
+    background-color: rgba(241, 22, 241, 0.3);
+    text-align: center;
+    float: left;
+    clear:none;
+    border-radius: 10%;
+    font-family: 'Bangers', cursive;
+    font-size: 32px;
+    color: yellow;
+}
+.myContact p{
+    color:yellow;
+    font-size: 32px;
+}
+ 
+@media screen and (max-height: 600px){
+    .overlay a {font-size: 30px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    .myContact{
+        float: none;
+        width: 250px;
+        font-size: 25px;
+        margin-left: 26%;
+        margin-top:20%;
+        padding:0;
+    }
+    .myContact div,p{
+        padding: 0;
+        margin: 0;
+    }
+    .map{
+        display: none;
+    }
+}

@@ -1,0 +1,135 @@
+<html>
+    <head>
+            <title>Music page</title>
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/hcfKqbdyKigWVC_F6XYi91UfnaUN8t46RH2Ac4PmOcb1tRcH8dAxnrENGifK72o17nwHfCmuPrv1KzjM6JynlENP8F_KKmuFJwwQbQ-nc8AZnCJ8q4WvZJossJA1fWmdmbIX5CvUAA">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon " href="https://cdn0.iconfinder.com/data/icons/3-colors-outline/500/Music_Player-512.png">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="musicStyle.css">
+        <link href="Main.css" rel="stylesheet"/>
+        <script src="jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        
+            <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                      <a href="index.html">Home</a>
+                      <a href="weatherApp.html">Today's Weather</a>
+                      <a href="email.html">My Email</a>
+                      <a href="music.html">My Music</a>
+                    </div>
+                  </div>
+                <script>
+                function openNav() {
+                  document.getElementById("myNav").style.width = "35%";
+                  document.getElementById("image").style.display="none";
+                  document.getElementById("songTitle").style.display="none";
+
+                }
+                
+                function closeNav() {
+                  document.getElementById("myNav").style.width = "0%";
+                  document.getElementById("image").style.display="block";
+                  document.getElementById("songTitle").style.display="block";
+                }
+                </script>
+                    <div class="mainNav">
+                        <li><a href="index.html" target="_self">HOME</a></li>
+                        <li><a href="about.html" target="_self">ABOUT</a></li>
+                        <li><a href="contact.html" target="_self">CONTACT US</a></li>
+                    </div>
+                    <li class ="navBtn" style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;  Lets Begin</li>
+        <div id="main">
+            <div id="image">
+                <img src="Poster1.jpg"/>
+            </div>
+            <div id="player">
+                <div id="songTitle">Wait....</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="Play.png"/></button>
+                    <button id="next" onclick="next()"><img src="Next.png" height="90%" width="90%"/></button>
+                </div>
+                
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+            </div>
+        </div>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='title'>
+    </body>
+    <script type="text/javascript">
+    
+        var songs = ["Malang.mp3","Circles.mp3","Reload.mp3"];
+        var poster = ["Poster1.jpg","Poster2.jpg","Poster3.jpg"];
+        
+        var songTitle = document.getElementById("songTitle");
+        var fillBar = document.getElementById("fill");
+        
+        var song = new Audio();
+        var currentSong = 0;    // it point to the current song
+        
+        window.onload = playSong;   // it will call the function playSong when window is load
+        
+        function playSong(){
+            
+            song.src = songs[currentSong];  //set the source of 0th song 
+            
+            songTitle.textContent = songs[currentSong]; // set the title of song
+            
+            song.play();    // play the song
+        }
+        
+        function playOrPauseSong(){
+            
+            if(song.paused){
+                song.play();
+                $("#play img").attr("src","Pause.png");
+            }
+            else{
+                song.pause();
+                $("#play img").attr("src","Play.png");
+            }
+        }
+        
+        song.addEventListener('timeupdate',function(){ 
+            
+            var position = song.currentTime / song.duration;
+            
+            fillBar.style.width = position * 100 +'%';
+        });
+        
+    
+        function next(){
+            
+            currentSong++;
+            if(currentSong > 2){
+                currentSong = 0;
+            }
+            playSong();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",poster[currentSong]);
+            $("#bg img").attr("src",poster[currentSong]);
+        }
+    
+        function pre(){
+            
+            currentSong--;
+            if(currentSong < 0){
+                currentSong = 2;
+            }
+            playSong();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",poster[currentSong]);
+            $("#bg img").attr("src",poster[currentSong]);
+        }
+    </script>   
+</html>

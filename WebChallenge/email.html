@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://pngimg.com/uploads/gmail_logo/gmail_logo_PNG1.png">
+<link rel="stylesheet" href="emailStyle.css">
+
+<script>
+    window.addEventListener("load",function(){
+        var load_screen=document.getElementById("load_screen");
+        document.body.removeChild(load_screen);
+    });
+</script>
+<style>
+    #load_screen{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: #000;
+        overflow: hidden;
+    }
+
+
+    /*--------------------------*/
+    .loading{
+color: #fff;
+font-size: 30px;
+margin-left: -45px;
+}
+h1 {
+position: absolute;
+font-family: 'Open Sans';
+font-weight: 600;
+font-size: 12px;
+text-transform: uppercase;
+left: 50%;
+top: 58%;
+margin-left: -20px;
+}
+
+.body {
+position: absolute;
+top: 50%;
+margin-left: -50px;
+left: 50%;
+animation: speeder .4s linear infinite;
+}
+.body > span {
+height: 5px;
+width: 35px;
+background: #fff;
+position: absolute;
+top: -19px;
+left: 60px;
+border-radius: 2px 10px 1px 0;
+}
+
+.base span {
+position: absolute;
+width: 0;
+height: 0;
+border-top: 6px solid transparent;
+border-right: 100px solid #fff;
+border-bottom: 6px solid transparent;
+}
+.base span:before {
+content: "";
+height: 22px;
+width: 22px;
+border-radius: 50%;
+background: #fff;
+position: absolute;
+right: -110px;
+top: -16px;
+}
+.base span:after {
+content: "";
+position: absolute;
+width: 0;
+height: 0;
+border-top: 0 solid transparent;
+border-right: 55px solid #fff;
+border-bottom: 16px solid transparent;
+top: -16px;
+right: -98px;
+}
+
+.face {
+position: absolute;
+height: 12px;
+width: 20px;
+background: #fff;
+border-radius: 20px 20px 0 0;
+transform: rotate(-40deg);
+right: -125px;
+top: -15px;
+}
+.face:after {
+content: "";
+height: 12px;
+width: 12px;
+background: #fff;
+right: 4px;
+top: 7px;
+position: absolute;
+transform: rotate(40deg);
+transform-origin: 50% 50%;
+border-radius: 0 0 0 2px;
+}
+
+.body > span > span:nth-child(1),
+.body > span > span:nth-child(2),
+.body > span > span:nth-child(3),
+.body > span > span:nth-child(4) {
+width: 30px;
+height: 1px;
+background: #fff;
+position: absolute;
+animation: fazer1 .2s linear infinite;
+}
+
+.body > span > span:nth-child(2) {
+top: 3px;
+animation: fazer2 .4s linear infinite;
+}
+
+.body > span > span:nth-child(3) {
+top: 1px;
+animation: fazer3 .4s linear infinite;
+animation-delay: -1s;
+}
+
+.body > span > span:nth-child(4) {
+top: 4px;
+animation: fazer4 1s linear infinite;
+animation-delay: -1s;
+}
+
+@keyframes fazer1 {
+0% {
+left: 0;
+}
+100% {
+left: -80px;
+opacity: 0;
+}
+}
+@keyframes fazer2 {
+0% {
+left: 0;
+}
+100% {
+left: -100px;
+opacity: 0;
+}
+}
+@keyframes fazer3 {
+0% {
+left: 0;
+}
+100% {
+left: -50px;
+opacity: 0;
+}
+}
+@keyframes fazer4 {
+0% {
+left: 0;
+}
+100% {
+left: -150px;
+opacity: 0;
+}
+}
+@keyframes speeder {
+0% {
+transform: translate(2px, 1px) rotate(0deg);
+}
+10% {
+transform: translate(-1px, -3px) rotate(-1deg);
+}
+20% {
+transform: translate(-2px, 0px) rotate(1deg);
+}
+30% {
+transform: translate(1px, 2px) rotate(0deg);
+}
+40% {
+transform: translate(1px, -1px) rotate(1deg);
+}
+50% {
+transform: translate(-1px, 3px) rotate(-1deg);
+}
+60% {
+transform: translate(-1px, 1px) rotate(0deg);
+}
+70% {
+transform: translate(3px, 1px) rotate(-1deg);
+}
+80% {
+transform: translate(-2px, -1px) rotate(1deg);
+}
+90% {
+transform: translate(2px, 1px) rotate(0deg);
+}
+100% {
+transform: translate(1px, -2px) rotate(-1deg);
+}
+}
+.longfazers {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+.longfazers span {
+position: absolute;
+height: 2px;
+width: 20%;
+background: #fff;
+}
+.longfazers span:nth-child(1) {
+top: 20%;
+animation: lf .6s linear infinite;
+animation-delay: -5s;
+}
+.longfazers span:nth-child(2) {
+top: 40%;
+animation: lf2 .8s linear infinite;
+animation-delay: -1s;
+}
+.longfazers span:nth-child(3) {
+top: 60%;
+animation: lf3 .6s linear infinite;
+}
+.longfazers span:nth-child(4) {
+top: 80%;
+animation: lf4 .5s linear infinite;
+animation-delay: -3s;
+}
+
+@keyframes lf {
+0% {
+left: 200%;
+}
+100% {
+left: -200%;
+opacity: 0;
+}
+}
+@keyframes lf2 {
+0% {
+left: 200%;
+}
+100% {
+left: -200%;
+opacity: 0;
+}
+}
+@keyframes lf3 {
+0% {
+left: 200%;
+}
+100% {
+left: -100%;
+opacity: 0;
+}
+}
+@keyframes lf4 {
+0% {
+left: 200%;
+}
+100% {
+left: -100%;
+opacity: 0;
+}
+}
+    /*--------------------------*/
+</style>
+</head>
+<title>
+    Email Page
+</title>
+<body>
+    <div id="load_screen">
+        <div class='body'>
+                <span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <div class='base'>
+                  <span></span>
+                  <div class='face'></div>
+                </div>
+              </div>
+              <div class='longfazers'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <h1 class='loading'>Loading Mails</h1>
+    </div> 
+<div class="header">
+  <img src="https://pngimg.com/uploads/gmail_logo/gmail_logo_PNG1.png" width=" 80px" height="80px">
+  <h2>Email Page</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card-email">
+      <h2>Advaita Tech fest</h2>
+      <h5>Date:    Feb 4, 2020</h5>
+      <p> Subject: Web Challenge</p>
+      <p>Web App Features:
+            1. The app should start with a loading screen. (3pts)
+            2. Design should be responsive, and should look fluid on all devices.
+            3. There should be a main page, containing links to the three pages given below.
+            Design it as creative as you can (5pts).
+            4. Page-1: A Weather App UI. Only frontend is required. The values may be
+            hardcoded. Bonus points for using any API (+3 pts). Design it as creative as
+            you can. (3pts)
+            5. Page-2: Something like Email App UI which must be scrollable long enough.
+            Hardcode all email. No implementation/functionalities are required. Design it
+            as creative as you can. (4pts)
+            6. Page-3: Music Player UI. It should have clickable icons which when clicked
+            should play any song (online or offline). (5pts) You can add more features for
+            bonus. (+2pts for each new feature/widget). Only frontend is required for
+            evaluation of the webpage.
+            Adding extra features are appreciated for bonus, only if the compulsory
+            featured are successfully implemented beforehand.
+            Code should be clean, concise and must follow the best practices.</p>
+    </div>
+    <div class="card-email">
+        <h2>Advaita Tech fest</h2>
+        <h5>Date:    Feb 4, 2020</h5>
+        <p> Subject: Web Challenge</p>
+        <p>Web App Features:
+              1. The app should start with a loading screen. (3pts)
+              2. Design should be responsive, and should look fluid on all devices.
+              3. There should be a main page, containing links to the three pages given below.
+              Design it as creative as you can (5pts).
+              4. Page-1: A Weather App UI. Only frontend is required. The values may be
+              hardcoded. Bonus points for using any API (+3 pts). Design it as creative as
+              you can. (3pts)
+              5. Page-2: Something like Email App UI which must be scrollable long enough.
+              Hardcode all email. No implementation/functionalities are required. Design it
+              as creative as you can. (4pts)
+              6. Page-3: Music Player UI. It should have clickable icons which when clicked
+              should play any song (online or offline). (5pts) You can add more features for
+              bonus. (+2pts for each new feature/widget). Only frontend is required for
+              evaluation of the webpage.
+              Adding extra features are appreciated for bonus, only if the compulsory
+              featured are successfully implemented beforehand.
+              Code should be clean, concise and must follow the best practices.
+            </p>
+      </div>
+      <div class="card-email">
+          <h2>Advaita Tech fest</h2>
+          <h5>Date:    Feb 4, 2020</h5>
+          <p> Subject: Web Challenge</p>
+          <p>Random Text Features:
+              The standard Lorem Ipsum passage, used since the 1500s
+
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+              
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+              1914 translation by H. Rackham
+              
+              "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+          </p>
+        </div>
+    <div class="card-email">
+      <h2>Advaita Tech Fest</h2>
+      <h5>Date:   Feb 5, 2020</h5>
+      <p>Subject: Android App Challenge</p>
+      <p>
+          1914 translation by H. Rackham
+
+          "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+          Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+          
+          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+          1914 translation by H. Rackham
+          
+          "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+            .</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Recent Mails</h2>
+      <p>b218036@iiit-bh.ac.in</p>
+      <p>b518036@iiit-bh.ac.in</p>
+      <p>b218067@iiit-bh.ac.in</p>
+      <p>b218028@iiit-bh.ac.in</p>
+      <p>b218064@iiit-bh.ac.in</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn2.iconfinder.com/data/icons/mail-retro/60/47_-Compose_Mail-_mail_message_letter_envelope-512.png" width="50px" height="50px">
+      <h3>Compose</h3>
+      <div onclick="window.alert('Inbox is clicked');"><img src="https://cdn.onlinewebfonts.com/svg/img_564513.png" width=" 30px" width="30px">      Inbox</div>
+      <div onclick="window.alert('Send is clicked');"><img src="https://cdn.iconscout.com/icon/free/png-256/send-mail-69-667875.png" width=" 30px" width="30px">      Send</div>
+      <div onclick="window.alert('Draft is clicked');"><img src="data:image/png;base64,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" width="30px" height="30px">   Draft</div>
+    </div>
+    <div class="card">
+      <img src="https://cdn0.iconfinder.com/data/icons/e-mail-color/512/email_junk_mail_phishing_scam_spam_virus-512.png " width="50px" height="50px">
+      <h3>Spam Mails</h3>
+      <p>blackhat.io</p>
+      <p>mrrobot.co.in</p>
+      <p>mrspam.com</p>
+      <p>hackerworld.com</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>HOME</h2>
+  <a href="index.html"><img src="http://www.transparentpng.com/thumb/home/J4GYui-home-round-button-icon-png.png" width="80px" height="80px"></a>
+</div>
+
+</body>
+</html>

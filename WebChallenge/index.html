@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web Challenge</title>
+    <script src="slide.js"></script>
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/hcfKqbdyKigWVC_F6XYi91UfnaUN8t46RH2Ac4PmOcb1tRcH8dAxnrENGifK72o17nwHfCmuPrv1KzjM6JynlENP8F_KKmuFJwwQbQ-nc8AZnCJ8q4WvZJossJA1fWmdmbIX5CvUAA">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="animation.css">
+
+
+    <script>
+            window.addEventListener("load",function(){
+                var load_screen=document.getElementById("load_screen");
+                document.body.removeChild(load_screen);
+            });
+        </script>
+        <style>
+            #load_screen{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                background-color: #000;
+                overflow: hidden;
+            }
+
+
+            /*--------------------------*/
+            .loading{
+  color: #fff;
+  font-size: 30px;
+  margin-left: -45px;
+}
+h1 {
+  position: absolute;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  left: 50%;
+  top: 58%;
+  margin-left: -20px;
+}
+
+.body {
+  position: absolute;
+  top: 50%;
+  margin-left: -50px;
+  left: 50%;
+  animation: speeder .4s linear infinite;
+}
+.body > span {
+  height: 5px;
+  width: 35px;
+  background: #fff;
+  position: absolute;
+  top: -19px;
+  left: 60px;
+  border-radius: 2px 10px 1px 0;
+}
+
+.base span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 100px solid #fff;
+  border-bottom: 6px solid transparent;
+}
+.base span:before {
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: -110px;
+  top: -16px;
+}
+.base span:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  border-right: 55px solid #fff;
+  border-bottom: 16px solid transparent;
+  top: -16px;
+  right: -98px;
+}
+
+.face {
+  position: absolute;
+  height: 12px;
+  width: 20px;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  transform: rotate(-40deg);
+  right: -125px;
+  top: -15px;
+}
+.face:after {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  right: 4px;
+  top: 7px;
+  position: absolute;
+  transform: rotate(40deg);
+  transform-origin: 50% 50%;
+  border-radius: 0 0 0 2px;
+}
+
+.body > span > span:nth-child(1),
+.body > span > span:nth-child(2),
+.body > span > span:nth-child(3),
+.body > span > span:nth-child(4) {
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  animation: fazer1 .2s linear infinite;
+}
+
+.body > span > span:nth-child(2) {
+  top: 3px;
+  animation: fazer2 .4s linear infinite;
+}
+
+.body > span > span:nth-child(3) {
+  top: 1px;
+  animation: fazer3 .4s linear infinite;
+  animation-delay: -1s;
+}
+
+.body > span > span:nth-child(4) {
+  top: 4px;
+  animation: fazer4 1s linear infinite;
+  animation-delay: -1s;
+}
+
+@keyframes fazer1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}
+@keyframes fazer2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100px;
+    opacity: 0;
+  }
+}
+@keyframes fazer3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50px;
+    opacity: 0;
+  }
+}
+@keyframes fazer4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150px;
+    opacity: 0;
+  }
+}
+@keyframes speeder {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -3px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-2px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 3px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-2px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.longfazers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.longfazers span {
+  position: absolute;
+  height: 2px;
+  width: 20%;
+  background: #fff;
+}
+.longfazers span:nth-child(1) {
+  top: 20%;
+  animation: lf .6s linear infinite;
+  animation-delay: -5s;
+}
+.longfazers span:nth-child(2) {
+  top: 40%;
+  animation: lf2 .8s linear infinite;
+  animation-delay: -1s;
+}
+.longfazers span:nth-child(3) {
+  top: 60%;
+  animation: lf3 .6s linear infinite;
+}
+.longfazers span:nth-child(4) {
+  top: 80%;
+  animation: lf4 .5s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes lf {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf2 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf3 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes lf4 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+            /*--------------------------*/
+        </style>
+</head>
+
+<body> 
+        <div id="load_screen">
+                <div class='body'>
+                        <span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </span>
+                        <div class='base'>
+                          <span></span>
+                          <div class='face'></div>
+                        </div>
+                      </div>
+                      <div class='longfazers'>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <h1 class='loading'>Loading</h1>
+            </div> 
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="weatherApp.html">Today's Weather</a>
+      <a href="email.html">My Email</a>
+      <a href="music.html">My Music</a>
+    </div>
+  </div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+    <div class="mainNav">
+        <li><a href="index.html" target="_self">HOME</a></li>
+        <li><a href="about.html" target="_self">ABOUT</a></li>
+        <li><a href="contact.html" target="_self">CONTACT US</a></li>
+    </div>
+    <li class ="navBtn" onclick="openNav()">&#9776;  Lets Begin</li>
+    <svg viewBox="0 0 960 300">
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="80%">Web Challenge</text>
+      </symbol>
+    
+      <g class = "g-ants">
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+      </g>
+    </svg>
+    <P>By Mrutyunjay Dash and Sanket Puhan</P>
+    <footer>
+      <div class="middle">
+        <a class="btn" href="https://github.com/hacker-kyrie">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="btn" href="https://www.instagram.com/advaita_iiitbh/?hl=en">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="btn" href="https://www.youtube.com/channel/UCkULTsUj0_Ukm9DWOtin5yw">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a class="btn" href="www.google.com">
+          <i class="fab fa-google"></i>
+        </a>
+      </div>
+    </footer>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div id='title'>
+</body>
+</html>

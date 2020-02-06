@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+* {
+    font-family: 'Righteous', cursive;
+}
+
+body {
+    background-image: url(https://i.imgur.com/GcP71BP.png);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.heading:hover {
+    background-color: transparent !important;
+    color: #fff;
+}
+
+.heading {
+    color: #fff;
+    text-align: center;
+    padding: 18px 22px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+    font-size: 45px;
+}
+
+.heading:hover {
+    transform: scale(1.2);
+}
+
+
+/* ______FOOTER________*/
+.middle {
+    padding: 0;
+    margin:0;
+    position: absolute;
+    bottom: -50px;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    margin: 25px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #ff00ea;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn i {
+    margin-right: 20px;
+    line-height: 90px;
+    font-size: 40px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.2);
+    color: #f1f1f1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #ff00ea;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+
+/*_____________________*/
+
+@media screen and (max-width: 700px) {
+    body {
+        background-image: url(https://i.imgur.com/GcP71BP.png);
+        background-color: rgba(0, 0, 0, 0.3);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .heading {
+        margin-left: 60px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 40px;
+    }
+    .heading:hover {
+        transform: scale(1.2);
+    }
+    .btn {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 6px;
+        margin-top: 30px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px -5px #00000070;
+        color: #ff00ea;
+        overflow: hidden;
+        position: relative;
+    }
+    .middle {
+        text-align: center;
+    }
+    .btn i {
+        margin-left: 8px;
+        line-height: 50px;
+        font-size: 30px;
+    }
+    .btn:hover i {
+        transform: scale(1.2);
+        color: #f1f1f1;
+    }
+    .form:hover~.gallary {
+        display: none;
+    }
+    .form:hover~.home {
+        display: none;
+    }
+    .gallary:hover~.home {
+        display: none;
+    }
+    /***/
+}

@@ -1,0 +1,17 @@
+@media screen and (max-height: 600px) {
+    .overlay a {font-size: 30px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    .mainNav{
+        display: none;
+    }
+    .middle{
+        display: none;
+    }
+    .navBtn{
+        margin-bottom: 30px;
+    }
+  }
